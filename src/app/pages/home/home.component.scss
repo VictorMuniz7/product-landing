@@ -1,0 +1,455 @@
+.back{
+  width: 100%;
+  height: 100vh;
+}
+
+header{
+  width: 100%;
+  height: 90px;
+  background: rgb(255,255,255);
+  background: linear-gradient(75deg, rgba(255,255,255,1) 0%, rgba(214,214,214,1) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.logo{
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.login-div{
+  width: 40%;
+  height: 90%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#login-div-btn{
+  height: 80%;
+  width: 47%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 2px solid black;
+    text-decoration: none;
+    color: #000;
+
+
+  &:active{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+  }
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+main{
+  width: 100%;
+  height: 75vh;
+  background: url('../../../assets/bgmain1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+}
+
+.main-container{
+  width: 85%;
+  height: 95%;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  img{
+    width: 200px;
+    background: url('../../../assets/bgGif.gif');
+    background-size: cover;
+  }
+
+  a{
+    width: 80%;
+    height: 50px;
+    text-decoration: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    color: black;
+    animation: buyButtonAnimation .7s ease-in infinite;
+  }
+}
+
+.description{
+  width: 100%;
+
+  h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    background-color: rgba(255,255,255, 0.7);
+    margin-bottom: 10px;
+  }
+
+  p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: rgba(255,255,255, 0.7);
+  }
+}
+
+.second-section{
+  padding-top: 75px;
+  width: 100%;
+  height: 51rem;
+  background: url('../../../assets/bg2.jpg');
+  background-size: cover;
+}
+
+.cards-container{
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card{
+  width: 225px;
+  height: 250px;
+  background: url('../../../assets/backcube.png');
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+
+  h3{
+    font-size: 45px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+
+  p{
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.third-section{
+  width: 100%;
+  height: 80vh;
+  background: url('../../../assets/bg3.jpg');
+  background-size: cover;
+  padding-top: 50px;
+}
+
+.scroll-div{
+  width: 60%;
+  height: 150px;
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  &::-webkit-scrollbar{
+    background-color: rgb(194, 194, 194);
+    height: 20px;
+  }
+
+  &::-webkit-scrollbar-button{
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background: rgb(80, 77, 77);
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.box{
+  min-width: 150px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: #fff;
+  color: #000;
+  scroll-snap-align: center;
+}
+
+.box:nth-child(odd){
+  background-color: #000;
+  color: #fff;
+}
+
+.cube-div{
+  width: 65%;
+  padding: 10px;
+  margin: 75px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img{
+    width: 175px;
+  }
+}
+
+footer{
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(80, 77, 77);
+
+  p{
+    color: #fff;
+  }
+
+  a{
+    color: #fff;
+  }
+}
+
+.contact-div{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  a{
+    font-size: 22px;
+  }
+}
+
+.icons-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    font-size: 30px;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (min-width: 40em) {
+
+  .cube-div{
+    img{
+      width: 250px;
+    }
+  }
+
+  .third-section{
+    background-position: bottom;
+  }
+
+  .description{
+    h1{
+      font-size: 70px;
+    }
+
+    p{
+      font-size: 30px;
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 59em) {
+
+  .logo{
+    font-size: 40px;
+  }
+
+  .cards-container{
+    max-width: 800px;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .card{
+    width: 300px;
+    height: 325px;
+    background-size: 325px;
+
+    h3{
+      font-size: 60px;
+    }
+
+    h4{
+      font-size: 30px;
+    }
+
+    p{
+      font-size: 18px;
+    }
+  }
+
+  .scroll-div{
+    width: 40%;
+    height: 180px;
+  }
+
+  .box{
+    min-width: 170px;
+    height: 170px;
+  }
+
+  footer{
+    p{
+      font-size: 20px;
+    }
+  }
+
+  .contact-div{
+    a{
+      font-size: 26px;
+    }
+  }
+
+  .icons-div{
+    a{
+      font-size: 40px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 75em) {
+
+  main{
+    background-position: bottom;
+  }
+
+  .main-container{
+    position: relative;
+
+    a{
+      width: 40%;
+    }
+
+    img{
+      width: 250px;
+    }
+  }
+
+  .description{
+    h1{
+      font-size: 85px;
+    }
+  }
+
+  .header-cube{
+    width: 60px;
+    height: 60px;
+    background: url('../../../assets/cube.png');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-color: black;
+    background-position: center;
+    position: absolute;
+    align-self: center;
+    top: -100px;
+    box-shadow: 0 0 15px 8px black;
+    border-radius: 50%;
+
+    &:hover{
+      animation: cubeSpinAnimation 3s linear infinite;
+
+    }
+  }
+
+  .login-div{
+    width: 20%;
+  }
+
+}
+
+@media screen and (min-width: 97em) {
+
+  .second-section{
+    height: 60vh;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+  }
+
+
+  .cards-container{
+    max-width: 80%;
+  }
+
+  .scroll-div{
+    width: 30%;
+    height: 210px;
+  }
+
+  .box{
+    min-width: 210px;
+    height: 200px;
+    font-size: 40px;
+  }
+
+  .cube-div{
+    img{
+      width: 300px;
+    }
+  }
+}
+
+
+
+@keyframes buyButtonAnimation {
+  0%{
+    box-shadow: 0 0 1px 1px white;
+  }
+
+  50%{
+    box-shadow: 0 0 7px 7px white;
+  }
+
+  100%{
+    box-shadow: 0 0 1px 1px white;
+  }
+}
+
+@keyframes cubeSpinAnimation {
+
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
