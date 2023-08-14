@@ -9,6 +9,7 @@ import { FaqComponent } from './contact/faq/faq.component';
 import { BuyComponent } from './buy/buy.component';
 import { HomeComponent } from './home/home.component';
 import { RegisteredComponent } from './sign/registered/registered.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { RegisteredComponent } from './sign/registered/registered.component';
     FaqComponent,
     BuyComponent,
     HomeComponent,
-    RegisteredComponent
+    RegisteredComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

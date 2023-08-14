@@ -1,1 +1,17 @@
-<p>registered works!</p>
+<div class="back" [style.backgroundImage]="background">
+
+  <div class="container">
+    <div class="cube" (click)="changeBg()">
+      <div class="front"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="back"></div>
+      <div class="top"></div>
+      <div class="bottom"></div>
+    </div>
+  </div>
+
+  <h1>You have successfully registered !!</h1>
+  <a routerLink="/login">Go to login</a>
+
+</div>
