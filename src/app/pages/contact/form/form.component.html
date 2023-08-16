@@ -1,1 +1,83 @@
-<p>form works!</p>
+<div class="back">
+  <app-header></app-header>
+
+  <div class="request-sent" [hidden]="requestSent">
+    <img src="/assets/requestSentCube.png" alt="A little cube">
+    <p>Your request has been sent, a response will be sent to your email in less than 24 hours.</p>
+    <a routerLink="">Back to home</a>
+  </div>
+
+  <div class="container" >
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate [style.display]="formDisplay">
+      <h1>Contact us</h1>
+      <div>
+        <label for="firstName">First Name <br></label>
+        <input type="text" id="firstName" name="firstName" formControlName="firstName">
+      </div>
+
+      <div *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched)">
+        <div *ngIf="contactForm.get('firstName')?.errors?.['required']" class="error-div">
+          First name is required
+        </div>
+      </div>
+
+      <div>
+        <label for="email">Email <br></label>
+        <input type="text" id="email" name="email" formControlName="email">
+      </div>
+
+      <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+        <div *ngIf="contactForm.get('email')?.errors?.['required']" class="error-div">
+          Email is required
+        </div>
+        <div *ngIf="contactForm.get('email')?.errors?.['email']" class="error-div">
+          Invalid email
+        </div>
+      </div>
+
+      <div>
+        <label for="phone">Phone <br></label>
+        <input type="text" id="phone" name="phone" formControlName="phone">
+      </div>
+
+      <div *ngIf="!phone?.valid && (phone?.dirty || phone?.touched)">
+        <div *ngIf="contactForm.get('phone')?.errors?.['required']" class="error-div">
+          Phone is required
+        </div>
+        <div *ngIf="contactForm.get('phone')?.errors?.['pattern']" class="error-div">
+          Phone format is invalid
+        </div>
+      </div>
+
+      <select class="select-input" formControlName="selectedIssue">
+        <option value="">Select a issue</option>
+        <option *ngFor="let issue of issues">
+          {{issue.viewValue}}
+        </option>
+      </select>
+
+      <div *ngIf="!issueIsSelected">
+        <div *ngIf="contactForm.get('selectedIssue')?.errors?.['required']" class="error-div">
+          Issue is required
+        </div>
+      </div>
+
+
+      <div>
+        <label for="description">Description <br></label>
+        <textarea name="description" id="description" formControlName="description" cols="30" rows="6"></textarea>
+      </div>
+
+      <div *ngIf="!description?.valid">
+        <div *ngIf="contactForm.get('description')?.errors?.['maxlength']" class="error-div">
+          Max length allowed is {{description?.errors?.['maxlength']?.requiredLength}}
+        </div>
+      </div>
+
+      <button id="submitBtn">Submit</button>
+    </form>
+  </div>
+  <app-footer></app-footer>
+</div>
+

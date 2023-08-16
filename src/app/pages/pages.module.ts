@@ -10,6 +10,8 @@ import { BuyComponent } from './buy/buy.component';
 import { HomeComponent } from './home/home.component';
 import { RegisteredComponent } from './sign/registered/registered.component';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -21,11 +23,14 @@ import { HeaderComponent } from './header/header.component';
     BuyComponent,
     HomeComponent,
     RegisteredComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class PagesModule { }
