@@ -3,6 +3,7 @@
   min-height: 108vh;
   background: linear-gradient(90deg, rgba(214,214,214,1), white);
   position: relative;
+  padding-bottom: 130px;
 }
 
 .container{
@@ -54,8 +55,10 @@
 }
 
 .error-div{
+  width: 225px;
   color: red;
-}
+  text-align: left;
+  }
 
 .request-sent{
   margin: 20% auto;
@@ -109,6 +112,10 @@
 
   .request-sent{
     width: 60%;
+  }
+
+  .error-div{
+    width: 325px;
   }
 }
 
