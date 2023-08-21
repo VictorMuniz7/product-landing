@@ -10,7 +10,7 @@ export class RegisteredComponent {
   background = ''
 
   changeBg(){
-    this.background = "url('/assets/registeredBack.jpg')";
+    this.background = "url('./assets/registeredBack.jpg')";
     setTimeout(() => {
       this.background = ''
     }, 300)
